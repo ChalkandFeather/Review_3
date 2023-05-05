@@ -1,9 +1,22 @@
 const spellChecker = function (sentence) {
-  if (sentence.length === 0) {
+  if (typeof sentence !== "string") {
+    console.log("sentence must be a string");
+    throw new Error("sentence must be a string");
+  } else if (sentence === "") {
     console.log("sentence cannot be empty");
     throw new Error("sentence cannot be empty");
   }
+
+  const regex = /[\.,\/#!$%\^&\*;:{}=\-_`~()]/g;
+  const hasPunctuation = regex.test(sentence);
+
+  if (hasPunctuation) {
+    console.log("sentence cannot contain punctuation");
+    throw new Error("sentence cannot contain punctuation");
+  }
 };
+
+module.exports = spellChecker;
 
 module.exports = spellChecker;
 
