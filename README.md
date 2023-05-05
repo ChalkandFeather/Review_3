@@ -11,7 +11,11 @@ casing should be maintained in the output.
 
 **const spellChecker**
 Error - empty string " No input supplied "
-string.split(" ")
+const words = string.split(" ")
+iterates over words array
+push into new variable
+checks for string chars agains wordbank
+
 **input string to lowercase?**
 
 return string.join(" ")
